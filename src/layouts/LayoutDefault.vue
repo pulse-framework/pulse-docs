@@ -4,7 +4,7 @@
 		<main>
 			<slot/>
 		</main>
-		<Footer class="border-t pin-b" />
+		<Footer class="border-t" />
 	</div>	
 </template>
 
