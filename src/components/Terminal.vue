@@ -5,8 +5,8 @@
 			<!-- Buttons -->
 			<div class="float-left pl-2 absolute">
 				<span class="custRound bg-yellow-500"></span>
-				<span class="custRound bg-red-500"></span>
 				<span class="custRound bg-green-500"></span>
+				<span class="custRound bg-red-500"></span>
 			</div>
 			<!-- Title -->
 			<div class="center"><pre class="text-center text-sm">bash</pre></div>

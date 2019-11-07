@@ -4,8 +4,8 @@ module.exports = {
 		svgRule.uses.clear();
 		svgRule
 		.use('vue-svg-loader')
-		.loader('vue-svg-loader');
-
+		.loader('vue-svg-loader')
+		.end();
 		config.module.rule('md')
 		.test(/\.md/)
 		.use('vue-loader')
@@ -30,4 +30,7 @@ module.exports = {
 			]
 		})
 	},
+	configureWebpack: {
+		devtool: 'source-map'
+	}
   };

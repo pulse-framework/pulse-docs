@@ -4,15 +4,18 @@
   "author": "Pulse Framework",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "manifest": "node src/generateManifest.js",
+    "test": "jest .",
+    "serve": "node src/generateManifest.js && vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "front-matter": "^3.0.2",
+    "gray-matter": "^4.0.2",
     "markdown-it-anchor": "^5.2.5",
     "tailwindcss-theming": "^2.0.0",
+    "through2": "^3.0.1",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
   },
@@ -23,6 +26,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "klaw": "^3.0.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
     "tailwindcss": "^1.1.3",

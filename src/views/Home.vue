@@ -15,19 +15,22 @@
 	</div>
 <!-- https://purr.objects-us-east-1.dream.io/i/chern.jpg -->
 	<div class="bg-gray-800 text-gray-100 mt-6 px-10 pb-8 pt-4">
-		<p class="text-center pb-4 text-3xl font-serif">People who have adopted PulseJS</p>
+		<p class="text-center pb-4 text-3xl font-serif">Powered by PulseJS</p>
 		<!-- Adopter Cards here -->
+		<Adopters />
 	</div>
 </div>
 </template>
 
 <script>
 import LayoutDefault from '@/layouts/LayoutDefault';
+import Adopters from '@/components/Adopters'
 import Terminal from '@/components/Terminal'
 export default {
   name: `Home`,
   components: {
-	Terminal
+	Terminal,
+	Adopters
   },
   created() {
     this.$emit(`update:layout`, LayoutDefault);
