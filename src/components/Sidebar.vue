@@ -1,7 +1,7 @@
 <template>
     <div>
         <ul>
-            <li v-for="item in links" :key="item">
+            <li v-for="item in links" :key="item" class="pl-2 text-xl">
                 <a :href="item.path">{{ item.data.title }}</a>
             </li>
             <!-- <li :v-for="link in links">{{ link }}</li> -->

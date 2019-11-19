@@ -1,9 +1,9 @@
 <template>
-  <div class="container lg:mx-auto lg:flex">
-    <div class="mt-20 mb-16 border rounded shadow-2xl p-5 lg:mr-8 lg:w-3/12">
+  <div class="mt-4 flex">
+    <div class="container mx-auto mb-16 rounded p-5 lg:mr-8 lg:w-2/12 text-right">
       <Sidebar :version="version"/>
     </div>
-    <div class="mt-20 mb-16 border rounded shadow-2xl p-5 md:w-screen lg:w-9/12">
+    <div class="container mx-auto mb-16 rounded p-5 md:w-screen lg:w-10/12">
       <markdown-it-vue class="md-body" :content="content" />
     </div>
   </div>
