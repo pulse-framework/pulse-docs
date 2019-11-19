@@ -25,6 +25,8 @@ module.exports = {
 			use: [
 				/* markdown-it plugin */
 				require('markdown-it-anchor'),
+				require('markdown-it-container'),
+				require('markdown-it-emoji')
 				/* or */
 				// [require('markdown-it-xxx'), 'this is options']
 			]
