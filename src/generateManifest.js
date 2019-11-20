@@ -14,8 +14,9 @@ const getMdFilePaths = through2.obj(function (item, enc, next) {
     obj[version].push({
 		path: cleanPath(item),
 		version,
-		rawPath: rawPath(item).join('/'),
+		rawPath: rawPath(item),
 		data: fm.read(item.path).data,
+		slug: `${version}-${slugPath(item)}`,
 		content: fm.read(item.path).content,
 		excerpt: fm.read(item.path).excerpt,
 		isEmpty: fm.read(item.path).isEmpty
@@ -38,7 +39,11 @@ klaw(folder)
 	// console.dir(obj.items)
 	generateManifest()
   })
-// Clean the path to get the right slug
+const slugPath =(dir) => {
+	const path = cleanPath(dir).split('/') 
+	return path.pop().toString()
+}
+// Clean the path
 const cleanPath = (dir) => {
 	const dirPath = dir.path
 	const pathFix = dirPath.replace('.md', '')
@@ -83,8 +88,9 @@ const rawPath = (dir) => {
 	// Fix windows slashes
 	const slashFix = docsPath[1].split('\\')
 	slashFix.shift()
-	const lower = slashFix.toString().toLowerCase()
-	return slashFix
+	slashFix.unshift('docs')
+	const lower = slashFix.join('/').toString().toLowerCase()
+	return lower
 }
 
 const generateManifest = () => {
@@ -93,6 +99,6 @@ const generateManifest = () => {
 			console.error(err);
 			return;
 		}
-		console.log("File has been created");
+		console.log("Manifest has been created");
 	});
 }

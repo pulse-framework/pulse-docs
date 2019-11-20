@@ -1,3 +1,6 @@
+---
+title: 2.0.0 Changelog
+---
 # 2.0 - Internal rewrite
 
 Pulse version two is a complete ground-up rewrite. For the most part it should not affect your code, it is indeed backwards compatible. However there are a few things that have changed externally that you should know about before updating to V2.

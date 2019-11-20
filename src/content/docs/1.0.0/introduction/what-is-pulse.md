@@ -1,6 +1,5 @@
 ---
 title: What is Pulse?
-slug: what-is-pulse
 ---
 
 ::: warning NOTE

@@ -1,8 +1,9 @@
 ---
 title: What is Pulse?
+index: true
 ---
 
-::: warning NOTE
+::: warning
 Pulse is still in development, some features are not working yet. In this document they're marked as "coming soon".
 :::
 

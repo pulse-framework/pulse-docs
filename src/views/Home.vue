@@ -13,7 +13,6 @@
 			<Terminal class="mx-auto"/>
 		</div>
 	</div>
-<!-- https://purr.objects-us-east-1.dream.io/i/chern.jpg -->
 	<div class="bg-gray-800 text-gray-100 mt-6 px-10 pb-8 pt-4">
 		<p class="text-center pb-4 text-3xl font-serif">Powered by PulseJS</p>
 		<!-- Adopter Cards here -->

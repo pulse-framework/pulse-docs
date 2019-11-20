@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Header class="border-b shadow-md" />
+		<Header class="border-b shadow" />
 		<main>
 			<slot/>
 		</main>
