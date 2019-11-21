@@ -12,9 +12,9 @@
 			<div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
 				<nav>
 				<ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
-					<li><router-link class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-red-600" to="/features">Features</router-link></li>
+					<!-- <li><router-link class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-red-600" to="/features">Features</router-link></li> -->
 					<li><router-link class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-red-600" to="/docs">Documentation</router-link></li>
-					<li><router-link class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-red-600" to="/reference">Reference</router-link></li>
+					<!-- <li><router-link class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-red-600" to="/reference">Reference</router-link></li> -->
 					<li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-red-600 lg:mb-0 mb-2" href="https://github.com/pulse-framework">Github</a></li>
 				</ul>
 				</nav>
