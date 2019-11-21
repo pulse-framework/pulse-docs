@@ -1,18 +1,38 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div>
+	<div class="container mx-auto flex mt-10 items-center mb-20">
+		<div class="w-1/3">
+			<p class="text-3xl font-extrabold">
+				PulseJS
+			</p>
+			<p class="text-2xl">
+				The Framework that Works For You!
+			</p>
+		</div>
+		<div class="w-2/3">
+			<Terminal class="mx-auto"/>
+		</div>
+	</div>
+	<div class="bg-gray-800 text-gray-100 mt-6 px-10 pb-8 pt-4">
+		<p class="text-center pb-4 text-3xl font-serif">Powered by PulseJS</p>
+		<!-- Adopter Cards here -->
+		<Adopters />
+	</div>
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import LayoutDefault from '@/layouts/LayoutDefault';
+import Adopters from '@/components/Adopters'
+import Terminal from '@/components/Terminal'
 export default {
-  name: 'home',
+  name: `Home`,
   components: {
-    HelloWorld
-  }
-}
+	Terminal,
+	Adopters
+  },
+  created() {
+    this.$emit(`update:layout`, LayoutDefault);
+  },
+};
 </script>
