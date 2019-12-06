@@ -13,9 +13,13 @@
 			<Terminal class="mx-auto"/>
 		</div>
 	</div>
+	<div class="w-full justify-center flex">
+		<a href="/docs/"><button class="rounded py-4 px-8 bg-blue-700 hover:bg-blue-800 hover:underline font-semibold text-white text-xl">Get Started</button></a>
+	</div>
 	<div class="bg-gray-800 text-gray-100 mt-6 px-10 pb-8 pt-4">
-		<p class="text-center pb-4 text-3xl font-serif">Powered by PulseJS</p>
+		<p class="text-center pb-4 text-3xl font-serif">Powered by Pulse</p>
 		<!-- Adopter Cards here -->
+		<!-- Center cards :/ -->
 		<Adopters />
 	</div>
 </div>

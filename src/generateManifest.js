@@ -27,10 +27,6 @@ const getMdFilePaths = through2.obj(function (item, enc, next) {
 })
 klaw(folder)
   .pipe(getMdFilePaths)
-  .on('data', item => {
-		// console.log(item)
-	})
-
   .on('error', (err, item) => {
     console.log(err.message)
     console.log(item.path) // the file the error occurred on
@@ -79,7 +75,9 @@ const getVersion = (dir) => {
 // 	  .replace(/^-+/, '') // Trim - from start of text
 // 	  .replace(/-+$/, '') // Trim - from end of text
 //   }
-// Clean the path to get the right
+
+
+// Get the Raw Path
 const rawPath = (dir) => {
 	// Path of the directory
 	const dirPath = dir.path
@@ -92,7 +90,7 @@ const rawPath = (dir) => {
 	const lower = slashFix.join('/').toString().toLowerCase()
 	return lower
 }
-
+// Generate the manifest
 const generateManifest = () => {
 	fs.writeFile("src/static/manifest.json", JSON.stringify(obj, null, 2), (err) => {
 		if (err) {
