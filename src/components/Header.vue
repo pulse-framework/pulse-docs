@@ -31,7 +31,7 @@
 </style>
 
 <script>
-import PulseLogo from '../../public/logo.svg';
+import PulseLogo from '@/assets/logos/pulse.svg';
 export default {
 	name: 'Header',
 	components: {

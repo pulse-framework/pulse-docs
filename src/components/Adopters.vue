@@ -1,43 +1,28 @@
 <template>
-	<!-- <div>
-		<AdopterCard
-		:v-for="adopt in adopters"
-		:name="adopt.name"
-		:url="adopt.url"
-		:logo="adopt.logo" />
-	</div> -->
-	<div class="container mx-auto px-8 py-4 mb-10 font-sans leading-loose front-content text-center justify-center">
-        <div class="flex-1 overflow-y-auto inline-block" :v-for="adopter in adopters">
-			<AdopterCard 
-				:name="adopter.name"
-				:url="adopter.url"
-				:logo="adopter.logo"
-			/>
-        </div>
+	<div class="container mb-10 font-sans leading-loose front-content">
+		<template v-for="item in adopters" class="flex items-center">
+			<a :href="item.url">
+				<div class="w-1/6 rounded flex-initial inline-block mx-2">
+						<img class="h-64 w-5/6 mx-auto my-4 rounded-lg" 
+						:src="item.logo" 
+						alt="Company Logo"/>
+				</div>
+			</a>
+		</template>
     </div>
 </template>
 
 <script>
-import AdopterCard from '@/components/AdopterCard'
-const companies = [
-	{
-		name: 'Notify',
-		url: 'https://notify.me',
-		logo: 'notify.svg'
-	},
-	{
-		name: 'Notify2',
-		url: 'https://notify.me',
-		logo: 'notify.svg'
-	}
-];
 export default {
-	components: {
-		AdopterCard
-	},
-	data: function() {
+	data () {
 		return {
-			adopters: companies
+			adopters: [
+				{
+					name: 'Notify',
+					url: 'https://notify.me',
+					logo: 'https://assets.notify.me/notify.svg'
+				}
+			]
 		}
 	}
 }

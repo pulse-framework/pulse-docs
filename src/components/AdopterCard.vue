@@ -1,10 +1,12 @@
 <template>
-    <div class="shadow-lg p-6 m-2 card border rounded-lg hover:bg-blue-400">
-        <!-- <a :href="url"><img class="w-16 rounded-full mx-auto" :src="url" alt="Adopter"></a> -->
-        <div class="px-6 py-4 overflow-auto">
-            <a :href="link"><span class="font-bold text-xl mb-2" v-text="name"></span></a>
-            <p class="text-gray-700 text-base" v-text="tagline"></p>
-        </div>
+    <div>
+        <a :href="url">
+            <div class="w-1/6 rounded flex-initial inline-block mx-2">
+                    <img class="h-64 w-5/6 mx-auto my-4 rounded-lg" 
+                    :src="logo" 
+                    alt="Sunset in the mountains">
+            </div>
+        </a>
     </div>
 </template>
 <style scoped>
@@ -13,10 +15,8 @@
 <script>
 export default {
 	props: {
-		name: { required: true },
 		url: { default: '#' },
-		tagline: { default: '' },
-		logo: { default: 'notify.svg' }
+		logo: { default: 'https://random.dog/eb6afea1-02d9-413e-babf-b75ff2426006.jpg' }
     },
 }
 </script>

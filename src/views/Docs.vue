@@ -4,11 +4,11 @@
       <Sidebar :version="version"/>
     </div>
     <div class="pt-4 container mx-auto rounded pt-6 p-5 md:w-screen lg:w-10/12">
-      <markdown-it-vue class="md-body" :content="content" />
+      <markdown-it-vue class="md-body" :content="content" :options="options"/>
     </div>
   </div>
 </template>
-<style scoped>
+<style>
 
 </style>
 <script>
@@ -37,6 +37,31 @@ export default {
     },
     version: {
       type: String,
+    }
+  },
+  
+  data () {
+    return {
+      options: {
+        markdownIt: {
+          linkify: true
+        },
+        linkAttributes: {
+          attrs: {
+            target: '_blank',
+            rel: 'noopener'
+          }
+        },
+        githubToc: {
+          tocFirstLevel: 1,
+          tocLastLevel: 3,
+          tocClassName: 'toc',
+          anchorLinkSymbol: '#',
+          anchorLinkSpace: true,
+          anchorClassName: 'anchor',
+          anchorLinkSymbolClassName: 'octicon octicon-link'
+        }
+      }
     }
   },
   created() {
